@@ -43,7 +43,7 @@
     </div>
       <div class="flex flex-row justify-between items-end pt-1">
         <div class="flex-1">
-          <p class="font-display text-lg xl:leading-xl md:leading-base md:pb-2">{{product.title}}</p>
+          <p class="font-display text-lg xl:leading-xl md:leading-base md:pb-2 xl:pb-0">{{product.title}}</p>
           <p class="font-body1 text-xs xl:leading-base md:leading-sm">{{product.byline}}</p>
         </div>
         <div class="flex flex-1 flex-col items-end justify-center">
