@@ -1,5 +1,12 @@
 const product = require('./content/product')
 
+const productList = Array(56).fill(Object.assign({}, product))
+productList[2] = {
+  ...productList[2],
+  isSale: true,
+  salePrice: '$49.98'
+}
+
 module.exports = {
   siteConfig: {
     header: {
@@ -32,7 +39,7 @@ module.exports = {
       title: 'Collection Title',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum enim vel dapibus commodo. Suspendisse nec pharetra metus.',
-      products: Array(56).fill(Object.assign({}, product))
+      products: productList
     }
   }
 }
