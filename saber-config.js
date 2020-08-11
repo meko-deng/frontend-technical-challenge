@@ -32,13 +32,7 @@ module.exports = {
       title: 'Collection Title',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum enim vel dapibus commodo. Suspendisse nec pharetra metus.',
-      products: [
-        Object.assign({}, product),
-        Object.assign({}, product),
-        Object.assign({}, product),
-        Object.assign({}, product),
-        Object.assign({}, product)
-      ]
+      products: Array(56).fill(Object.assign({}, product))
     }
   }
 }

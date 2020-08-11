@@ -1,10 +1,41 @@
+
+<style scoped>
+  .fade-enter-active, .fade-leave-active {
+      transition: opacity 0.5s
+  }
+
+  .fade-enter, .fade-leave-to {
+      opacity: 0
+  }
+
+  .text-left {
+    position: relative;
+  }
+
+  .img-container {
+    position: relative;
+  }
+
+  .img-underlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+</style>
+
 <template>
   <div>
-    <div class="text-left" @mouseover="isHovering=true" @mouseleave="isHovering=false">
-      <transition name="fade" mode="out-in">
-        <lazy-image key=1 :src="product.images.secondary" v-if="isHovering" />
-        <lazy-image key=2 :src="product.images.main" v-else />
+    <div class="text-left">
+      <!-- explanation in email -->
+    <div class="img-container " @mouseover="isHovering=true" @mouseleave="isHovering=false">
+      <transition name="fade">
+        <lazy-image :src="product.images.main" v-show="!isHovering"/> <!-- use custom directive instead of v-show -->
       </transition>
+      <div class="img-underlay">
+        <lazy-image :src="product.images.secondary" />
+      </div>      
+    </div>
       <div class="flex flex-row justify-between items-end pt-1">
         <div class="flex-1">
           <p class="font-display text-lg leading-xl">{{product.title}}</p>

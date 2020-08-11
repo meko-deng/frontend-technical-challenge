@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <!-- fill in here -->
-  </div>
+  <transition name="fade" mode="out-in">
+    <img src="../static/placeholder.jpg" :data-src="src" alt="product image" />
+  </transition>
 </template>
 
 <script>
