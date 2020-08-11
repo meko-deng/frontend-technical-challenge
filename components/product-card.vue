@@ -43,11 +43,11 @@
     </div>
       <div class="flex flex-row justify-between items-end pt-1">
         <div class="flex-1">
-          <p class="font-display text-lg leading-xl">{{product.title}}</p>
-          <p class="font-body1 text-xs leading-base">{{product.byline}}</p>
+          <p class="font-display text-lg xl:leading-xl md:leading-base md:pb-2">{{product.title}}</p>
+          <p class="font-body1 text-xs xl:leading-base md:leading-sm">{{product.byline}}</p>
         </div>
         <div class="flex flex-1 flex-col items-end justify-center">
-          <p class="font-body1 text-sm leading-lg" v-if="product.isSale">{{product.salePrice + ' '}}<span class="line-through text-gray-400"> {{ product.price }} </span></p>
+          <p class="font-body1 text-sm leading-lg text-right" v-if="product.isSale">{{product.salePrice + ' '}}<span class="line-through text-gray-400"> {{ product.price }} </span></p>
           <p class="font-body1 text-sm leading-lg" v-else>{{product.price}}</p>
           <ReviewStars :stars="product.reviews.average"/>
           <p class="font-body1 text-xs leading-base">{{`(${product.reviews.count} Reviews)`}}</p>

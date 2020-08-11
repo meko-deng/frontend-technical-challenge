@@ -17,13 +17,19 @@ module.exports = {
       wide: '.073em'
     },
     fontSize: {
-      xs: '.65rem',
+      xs: '.625rem',
       sm: '.875rem',
       base: '1rem',
       lg: '1.125rem',
       xl: '1.25rem',
       '2xl': '1.5rem',
       '3xl': '2.1rem'
+    },
+    lineHeight: {
+      sm: '.875rem',
+      base: '1rem',
+      lg: '1.5rem',
+      xl: '2rem'
     },
     spacing: {
       '0': '0',
