@@ -11,7 +11,7 @@
           v-for="(product, i) in $siteConfig.page.products"
           :key="i"
           :product="product"
-          class="md:w-1/3 md:px-4 pb-12"
+          class="md:w-1/4 md:px-4 pb-12"
         />
       </div>
     </div>
